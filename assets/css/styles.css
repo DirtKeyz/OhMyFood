@@ -1,1 +1,116 @@
-/*# sourceMappingURL=styles.css.map */
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  height: 63px;
+}
+header .logo img {
+  font-size: 30px;
+  margin-top: 14px;
+  margin-bottom: 5px;
+}
+
+form {
+  display: flex;
+  height: 50px;
+  color: #353535;
+  background-color: #EAEAEA;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  position: relative;
+}
+form .search-bar {
+  border: none;
+  background-color: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  margin-left: 20px;
+}
+form .search-bar::-moz-placeholder {
+  color: #353535;
+}
+form .search-bar::placeholder {
+  color: #353535;
+}
+form .fa-location-dot {
+  position: relative;
+  font-size: 16px;
+  left: 35px;
+}
+
+.presentation {
+  background-color: #F7F7F7;
+  padding: 40px 0px 10px 0px;
+}
+.presentation h1 {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.presentation p {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+}
+.presentation .btn {
+  display: block;
+  height: 50px;
+  width: 218px;
+  color: #FFF;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 27px auto;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.fonctionnement-cards {
+  background-color: #FFF;
+}
+.fonctionnement-cards h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 48px 0 26px 20px;
+}
+.fonctionnement-cards i {
+  color: #7E7E7E;
+  margin-right: 25px;
+}
+.fonctionnement-cards i:last-child {
+  color: red;
+}
+.fonctionnement-cards p {
+  font-size: 16px;
+  font-weight: 500;
+}
+.fonctionnement-cards .cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.fonctionnement-cards .card {
+  display: flex;
+  justify-content: center;
+  background-color: #F7F7F7;
+  height: 72px;
+  width: 80%;
+  border-radius: 20px;
+  align-items: center;
+  border: none;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+.fonctionnement-cards .card:last-child i {
+  color: #9356DC;
+}/*# sourceMappingURL=styles.css.map */

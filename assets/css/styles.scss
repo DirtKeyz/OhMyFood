@@ -1,0 +1,164 @@
+// VARIABLES
+
+$background: #F7F7F7;
+$green: #99E2D0;
+$dark_green: #008766;
+$blue: #89C8FA;
+$dark_blue: #003A68;
+$purple: #9356DC;
+$pink: #FF79DA;
+$grey: #353535;
+$grey_light: #EAEAEA;
+$grey_dark: #7E7E7E;
+$black: #000;
+$white: #FFF; 
+
+// GENERAL
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+// HEADER
+
+header {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px 0 rgba($color: $black, $alpha: 0.20);
+    height: 63px;
+
+    .logo img {
+        font-size: 30px;
+        margin-top: 14px;
+        margin-bottom: 5px;
+        
+    }
+}
+
+// FORM
+
+form {
+    display: flex;
+    height: 50px;
+    color: $grey;
+    background-color: $grey_light;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    position: relative;
+    
+    .search-bar {
+        
+        border: none;
+        background-color: inherit;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        margin-left: 20px;
+
+
+    &::placeholder {color: $grey;}
+        
+    }
+
+    .fa-location-dot {
+        position: relative;
+        font-size: 16px;
+        left: 35px;
+    }
+}
+
+// PRESENTATION
+
+.presentation {
+
+    background-color: $background;
+    padding: 40px 0px 10px 0px;
+
+    h1 {
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .btn {
+        display: block;
+        height: 50px;
+        width: 218px;
+        color: $white;
+        background: linear-gradient($pink,$purple);
+        border-radius: 25px;
+        border: none;
+        font-size: 16px;
+        font-weight: 500;
+        margin: 27px auto;
+        box-shadow: 0 4px 10px 0 rgba($color: $black, $alpha: 0.25);
+    }
+
+}
+
+.fonctionnement-cards {
+
+    background-color: $white;
+
+
+    h2 {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 48px 0 26px 20px;
+    }
+
+    i {
+        color: $grey_dark;
+        margin-right: 25px;
+    }
+
+    i:last-child {
+        color: red;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        background-color: $background;
+        height: 72px;
+        width: 80%;
+        border-radius: 20px;
+        align-items: center;
+        border: none;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        
+        &:last-child {
+            i {
+                color: $purple;
+            }
+                  
+        }
+                  
+        }
+    }
+
+
+
+
