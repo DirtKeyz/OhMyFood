@@ -2,6 +2,10 @@
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 header {
@@ -48,7 +52,8 @@ form .fa-location-dot {
 
 .presentation {
   background-color: #F7F7F7;
-  padding: 40px 0px 10px 0px;
+  padding: 40px 0px 57px 0px;
+  text-align: center;
 }
 .presentation h1 {
   font-size: 24px;
@@ -60,9 +65,10 @@ form .fa-location-dot {
   font-size: 18px;
   font-weight: 300;
   text-align: center;
+  margin-bottom: 27px;
 }
 .presentation .btn {
-  display: block;
+  display: inline-block;
   height: 50px;
   width: 218px;
   color: #FFF;
@@ -71,8 +77,8 @@ form .fa-location-dot {
   border: none;
   font-size: 16px;
   font-weight: 500;
-  margin: 27px auto;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
 .fonctionnement-cards {
@@ -101,6 +107,7 @@ form .fa-location-dot {
   gap: 25px;
 }
 .fonctionnement-cards .card {
+  position: relative;
   display: flex;
   justify-content: center;
   background-color: #F7F7F7;
@@ -113,4 +120,61 @@ form .fa-location-dot {
 }
 .fonctionnement-cards .card:last-child i {
   color: #9356DC;
+}
+.fonctionnement-cards .card .pastille {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  background-color: #9356DC;
+  color: #FFF;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -12px;
+}
+
+.container {
+  background-color: #F7F7F7;
+  margin-top: 45px;
+}
+.container h2 {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 54px 0 20px 20px;
+}
+.container a {
+  display: block;
+  color: #000;
+  margin: 0 18px 20px 18px;
+}
+.container .card-resto {
+  height: 274px;
+  background-color: #FFF;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.container .card-resto .contenu-card-resto {
+  padding: 10px 25px 12px 13px;
+  align-items: center;
+}
+.container .card-resto h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.container .card-resto p {
+  font-size: 17px;
+  font-weight: 300;
+}
+.container .card-resto i {
+  font-size: 21px;
+}
+.container .card-resto img {
+  height: 75%;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.container .card-resto .contenu-card-resto {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=styles.css.map */

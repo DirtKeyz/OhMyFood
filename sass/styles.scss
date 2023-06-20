@@ -19,6 +19,9 @@ $white: #FFF;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    object-fit: cover;
+    box-sizing: border-box;
+    text-decoration: none;
     
 }
 
@@ -76,7 +79,10 @@ form {
 .presentation {
 
     background-color: $background;
-    padding: 40px 0px 10px 0px;
+    padding: 40px 0px 57px 0px;
+    text-align: center;
+    
+    
 
     h1 {
         font-size: 24px;
@@ -89,10 +95,12 @@ form {
         font-size: 18px;
         font-weight: 300;
         text-align: center;
+        margin-bottom: 27px;
     }
 
     .btn {
-        display: block;
+        
+        display: inline-block;
         height: 50px;
         width: 218px;
         color: $white;
@@ -101,11 +109,14 @@ form {
         border: none;
         font-size: 16px;
         font-weight: 500;
-        margin: 27px auto;
         box-shadow: 0 4px 10px 0 rgba($color: $black, $alpha: 0.25);
+        cursor: pointer;
+
     }
 
 }
+
+//FONCTIONNEMENT
 
 .fonctionnement-cards {
 
@@ -140,6 +151,7 @@ form {
     }
 
     .card {
+        position: relative;
         display: flex;
         justify-content: center;
         background-color: $background;
@@ -156,10 +168,92 @@ form {
             }
                   
         }
+
+        .pastille {
+            display: flex;
+            width: 24px;
+            height: 24px;
+            background-color: $purple;
+            color: $white;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: -12px;
+        }
                   
         }
     }
 
+    //RESTAURANTS
+
+    .container {
+
+        background-color: $background;
+        margin-top: 45px;
+        
+                
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            padding: 54px 0 20px 20px;
+        }
+
+       a {
+       
+        display: block;
+        color: $black;
+        margin: 0 18px 20px 18px;
+        
+
+       }
+
+        .card-resto {
+            
+            height: 274px;
+            background-color: $white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.10);
+            
+ 
+        .contenu-card-resto {
+            padding: 10px 25px 12px 13px;
+            align-items: center;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 17px;
+            font-weight: 300;
+        }
+
+        i {
+            font-size: 21px;
+        }
+
+       
+        img {
+            height: 75%;
+            width: 100%;
+            border-radius: 15px 15px 0 0;
+            
+        }
+
+        .contenu-card-resto {
+            display: flex;
+            justify-content: space-between;
+        }
+   
+    
+   
+   
+    }
+}
+    
 
 
 
