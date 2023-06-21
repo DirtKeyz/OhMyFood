@@ -29,9 +29,11 @@ $white: #FFF;
 
 header {
     display: flex;
+    position: relative;
     justify-content: center;
     box-shadow: 0 2px 4px 0 rgba($color: $black, $alpha: 0.20);
     height: 63px;
+    
 
     .logo img {
         width: 162px;
@@ -50,8 +52,7 @@ form {
     background-color: $grey_light;
     align-items: center;
     justify-content: center;
-    margin-top: 2px;
-    position: relative;
+    
     
     .search-bar {
         
@@ -104,16 +105,21 @@ form {
         height: 50px;
         width: 218px;
         color: $white;
-        background: linear-gradient($pink,$purple);
+        background : linear-gradient($pink,$purple);
         border-radius: 25px;
         border: none;
         font-size: 16px;
         font-weight: 500;
         box-shadow: 0 4px 10px 0 rgba($color: $black, $alpha: 0.25);
+        transition: all 300ms;
         cursor: pointer;
 
+        &:hover{
+            opacity: 0.8;
+            box-shadow: 0 4px 10px 0 rgba($color: $black, $alpha: 0.5);
+        }
     }
-
+    
 }
 
 //FONCTIONNEMENT
@@ -262,9 +268,11 @@ form {
      background-color: $grey;
      height: 186px;
 
-     img {
-        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(23deg) brightness(104%) contrast(102%);
-        width: 138px;
+     h4 {
+        font-size: 20px;
+        font-family: Shrikhand, cursive;
+        font-weight: 100;
+        color: $white;
         padding: 22px 0 16px 25px;
      }
 

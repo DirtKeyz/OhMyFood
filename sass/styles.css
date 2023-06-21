@@ -10,6 +10,7 @@
 
 header {
   display: flex;
+  position: relative;
   justify-content: center;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   height: 63px;
@@ -27,8 +28,6 @@ form {
   background-color: #EAEAEA;
   align-items: center;
   justify-content: center;
-  margin-top: 2px;
-  position: relative;
 }
 form .search-bar {
   border: none;
@@ -78,7 +77,12 @@ form .fa-location-dot {
   font-size: 16px;
   font-weight: 500;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  transition: all 300ms;
   cursor: pointer;
+}
+.presentation .btn:hover {
+  opacity: 0.8;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .fonctionnement-cards {
@@ -184,9 +188,11 @@ form .fa-location-dot {
   background-color: #353535;
   height: 186px;
 }
-.footer img {
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(23deg) brightness(104%) contrast(102%);
-  width: 138px;
+.footer h4 {
+  font-size: 20px;
+  font-family: Shrikhand, cursive;
+  font-weight: 100;
+  color: #FFF;
   padding: 22px 0 16px 25px;
 }
 .footer li {
