@@ -97,9 +97,6 @@ form .fa-location-dot {
   color: #7E7E7E;
   margin-right: 25px;
 }
-.fonctionnement-cards i:last-child {
-  color: red;
-}
 .fonctionnement-cards p {
   font-size: 16px;
   font-weight: 500;
@@ -122,10 +119,16 @@ form .fa-location-dot {
   border: none;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
-.fonctionnement-cards .card:last-child i {
+.fonctionnement-cards .card:hover i {
   color: #9356DC;
 }
-.fonctionnement-cards .card .pastille {
+.fonctionnement-cards .card:nth-child(2) {
+  padding-right: 15px;
+}
+.fonctionnement-cards .card:nth-child(3) {
+  padding-right: 10px;
+}
+.fonctionnement-cards .pastille {
   display: flex;
   width: 24px;
   height: 24px;
