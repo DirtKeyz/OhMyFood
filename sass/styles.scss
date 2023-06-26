@@ -213,24 +213,55 @@ form {
             padding: 54px 0 20px 20px;
         }
 
-       a {
+        a {
        
         display: block;
         color: $black;
         margin: 0 18px 20px 18px;
         
-
        }
 
-        .card-resto {
+       .new {
+        position: relative;
+       }
+
+       .new::before {
+
+        content: "Nouveau";
+        display: flex;
+        position: absolute;
+        height: 29px;
+        width: 80px;
+        background-color: $green;
+        color: $dark_green;
+        font-weight: 500;
+        font-size: 14px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2px;
+        box-shadow: 0 2px 4px 0 rgba($color: $black, $alpha: 0.15);
+        top: 15px;
+        right: 15px;
+        
+       }
+
+    .card-resto {
             
             height: 274px;
             background-color: $white;
             border-radius: 15px;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.10);
             
+            img {
+                height: 75%;
+                width: 100%;
+                border-radius: 15px 15px 0 0;
+                
+            }
  
         .contenu-card-resto {
+            display: flex;
+            justify-content: space-between;
             padding: 10px 25px 12px 13px;
             align-items: center;
         }
@@ -247,22 +278,8 @@ form {
 
         i {
             font-size: 21px;
-        }
 
-       
-        img {
-            height: 75%;
-            width: 100%;
-            border-radius: 15px 15px 0 0;
-            
-        }
-
-        .contenu-card-resto {
-            display: flex;
-            justify-content: space-between;
-        }
-   
-    
+         }
    
    
     }

@@ -156,13 +156,40 @@ form .fa-location-dot {
   color: #000;
   margin: 0 18px 20px 18px;
 }
+.container .new {
+  position: relative;
+}
+.container .new::before {
+  content: "Nouveau";
+  display: flex;
+  position: absolute;
+  height: 29px;
+  width: 80px;
+  background-color: #99E2D0;
+  color: #008766;
+  font-weight: 500;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  top: 15px;
+  right: 15px;
+}
 .container .card-resto {
   height: 274px;
   background-color: #FFF;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
+.container .card-resto img {
+  height: 75%;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
 .container .card-resto .contenu-card-resto {
+  display: flex;
+  justify-content: space-between;
   padding: 10px 25px 12px 13px;
   align-items: center;
 }
@@ -176,15 +203,6 @@ form .fa-location-dot {
 }
 .container .card-resto i {
   font-size: 21px;
-}
-.container .card-resto img {
-  height: 75%;
-  width: 100%;
-  border-radius: 15px 15px 0 0;
-}
-.container .card-resto .contenu-card-resto {
-  display: flex;
-  justify-content: space-between;
 }
 
 .footer {
