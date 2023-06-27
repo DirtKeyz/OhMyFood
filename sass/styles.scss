@@ -33,12 +33,14 @@ header {
     justify-content: center;
     box-shadow: 0 2px 4px 0 rgba($color: $black, $alpha: 0.20);
     height: 63px;
+    align-items: center;
     
 
     .logo img {
         width: 162px;
         margin-top: 14px;
         margin-bottom: 5px;
+       
         
     }
 }
@@ -54,7 +56,7 @@ form {
     justify-content: center;
     
     
-    .search-bar {
+    .search_bar {
         
         border: none;
         background-color: inherit;
@@ -124,7 +126,7 @@ form {
 
 //FONCTIONNEMENT
 
-.fonctionnement-cards {
+.fonctionnement_cards {
 
     background-color: $white;
 
@@ -245,7 +247,7 @@ form {
         
        }
 
-    .card-resto {
+    .card_resto {
             
             height: 274px;
             background-color: $white;
@@ -259,7 +261,7 @@ form {
                 
             }
  
-        .contenu-card-resto {
+        .contenu_card_resto {
             display: flex;
             justify-content: space-between;
             padding: 10px 25px 12px 13px;
@@ -277,7 +279,7 @@ form {
         }
 
         i {
-            font-size: 21px;
+            font-size: 25px;
 
          }
    
@@ -329,4 +331,149 @@ form {
 }
 
 
+// MENU-RESTAURANT
 
+header {
+    position: relative;
+
+    i {
+        display: block;
+        font-size: 30px;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.photo_plat {
+
+ img {
+    display: block;
+    width: 100%;
+    height: 275px;
+   
+}
+}
+
+.fiche_restaurant {
+
+    background-color: $background;
+
+   
+    .title {
+        
+        display: flex;
+        justify-content: space-around;
+        background-color: inherit;
+        align-items: center;
+        position: relative;
+        margin-top: -40px;
+        padding-top: 20px;
+        border-radius: 2em 2em 0 0;
+      
+    }
+    
+    h2 {
+        
+        font-size: 28px;
+        font-weight: 500;
+        font-family: "Shrikhand", "cursive";
+        
+        
+   }
+
+   i {
+    font-size: 25px;
+    margin-right: 20px;
+   }
+
+}
+
+.menu_restaurant {
+
+    h3 {
+        font-weight: 300;
+        font-size: 16px;
+        margin: 20px 0 20px 15px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 22px;
+            left: 0;
+            width: 35px;
+            border: 2px solid $green;
+        }
+    }
+
+    .entrees, .plats, .desserts {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .item {
+        display: flex;
+        justify-content: space-between;
+        height: 75px;
+        width: 95%;
+        margin: 0 auto;
+        align-items: center;
+        background-color: $background;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        
+        .entree {
+            
+            line-height: 23px;
+        }
+        
+        
+        h4 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: 300;
+        }
+        
+        .price {
+            display: flex;
+            align-self: flex-end;
+            font-weight: bold;
+
+        }
+
+       }
+     
+}
+
+.command {
+     text-align: center;
+     margin: 40px 0 40px 0;
+
+        .btn {
+       
+    display: inline-block;
+    height: 50px;
+    width: 218px;
+    color: $white;
+    background : linear-gradient($pink,$purple);
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 4px 10px 0 rgba($color: $black, $alpha: 0.25);
+    transition: all 300ms;
+    cursor: pointer;
+
+    &:hover{
+        opacity: 0.8;
+        box-shadow: 0 4px 10px 0 rgba($color: $black, $alpha: 0.5);
+    }
+}
+}
