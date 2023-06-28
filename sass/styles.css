@@ -1,11 +1,12 @@
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "sans-serif";
   margin: 0;
   padding: 0;
   -o-object-fit: cover;
      object-fit: cover;
   box-sizing: border-box;
   text-decoration: none;
+  list-style-type: none;
 }
 
 header {
@@ -92,7 +93,7 @@ form .fa-location-dot {
 .fonctionnement_cards h2 {
   font-size: 24px;
   font-weight: 700;
-  margin: 48px 0 26px 20px;
+  padding: 50px 0 25px 20px;
 }
 .fonctionnement_cards i {
   color: #7E7E7E;
@@ -107,6 +108,7 @@ form .fa-location-dot {
   flex-direction: column;
   align-items: center;
   gap: 25px;
+  padding: 0 20px;
 }
 .fonctionnement_cards .card {
   position: relative;
@@ -114,20 +116,15 @@ form .fa-location-dot {
   justify-content: center;
   background-color: #F7F7F7;
   height: 72px;
-  width: 80%;
+  width: 100%;
   border-radius: 20px;
   align-items: center;
   border: none;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  margin: 0 20px;
 }
 .fonctionnement_cards .card:hover i {
   color: #9356DC;
-}
-.fonctionnement_cards .card:nth-child(2) {
-  padding-right: 15px;
-}
-.fonctionnement_cards .card:nth-child(3) {
-  padding-right: 10px;
 }
 .fonctionnement_cards .pastille {
   display: flex;
@@ -142,15 +139,18 @@ form .fa-location-dot {
   left: -12px;
 }
 
-.container {
+.bg_resto {
   background-color: #F7F7F7;
   margin-top: 45px;
-  margin-bottom: 65px;
+}
+
+.container {
+  padding-bottom: 65px;
 }
 .container h2 {
   font-size: 24px;
   font-weight: 700;
-  padding: 54px 0 20px 20px;
+  padding: 50px 0 25px 20px;
 }
 .container a {
   display: block;
@@ -345,4 +345,27 @@ header i {
 .command .btn:hover {
   opacity: 0.8;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 1200px) {
+  .presentation h1 {
+    font-size: 40px;
+  }
+  .fonctionnement_cards {
+    width: 75%;
+    margin: auto;
+  }
+  .fonctionnement_cards .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+  .container {
+    width: 75%;
+    margin: auto;
+  }
+  .container .liste_resto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }/*# sourceMappingURL=styles.css.map */

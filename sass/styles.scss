@@ -11,17 +11,19 @@ $grey: #353535;
 $grey_light: #EAEAEA;
 $grey_dark: #7E7E7E;
 $black: #000;
-$white: #FFF; 
+$white: #FFF;
+$breakpoint_desktop: 1200px;
 
 // GENERAL
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", "sans-serif";
     margin: 0;
     padding: 0;
     object-fit: cover;
     box-sizing: border-box;
     text-decoration: none;
+    list-style-type: none;
     
 }
 
@@ -35,13 +37,10 @@ header {
     height: 63px;
     align-items: center;
     
-
     .logo img {
         width: 162px;
         margin-top: 14px;
         margin-bottom: 5px;
-       
-        
     }
 }
 
@@ -54,8 +53,7 @@ form {
     background-color: $grey_light;
     align-items: center;
     justify-content: center;
-    
-    
+
     .search_bar {
         
         border: none;
@@ -93,6 +91,7 @@ form {
         text-align: center;
         margin-bottom: 25px;
     }
+    
 
     p {
         font-size: 18px;
@@ -129,19 +128,16 @@ form {
 .fonctionnement_cards {
 
     background-color: $white;
-
-
+       
     h2 {
         font-size: 24px;
         font-weight: 700;
-        margin: 48px 0 26px 20px;
+        padding: 50px 0 25px 20px;
     }
 
     i {
         color: $grey_dark;
         margin-right: 25px;
-
-
     }
     
     p {
@@ -154,7 +150,7 @@ form {
         flex-direction: column;
         align-items: center;
         gap: 25px;
-
+        padding: 0 20px;
     }
     
     .card {
@@ -163,27 +159,19 @@ form {
         justify-content: center;
         background-color: $background;
         height: 72px;
-        width: 80%;
+        width: 100%;
         border-radius: 20px;
         align-items: center;
         border: none;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        margin: 0 20px;
 
         &:hover i{
             color: $purple;
         }
         
-        &:nth-child(2){
-            padding-right: 15px;
-        }
-
-        &:nth-child(3){
-            padding-right: 10px;
-        }
     }
 
-    
-    
     .pastille {
             display: flex;
             width: 24px;
@@ -202,30 +190,31 @@ form {
 
     //RESTAURANTS
 
-    .container {
-
+    .bg_resto {
         background-color: $background;
         margin-top: 45px;
-        margin-bottom: 65px;
         
-                
+    }
+    
+    .container {
+        
+        padding-bottom: 65px;
+     
         h2 {
             font-size: 24px;
             font-weight: 700;
-            padding: 54px 0 20px 20px;
+            padding: 50px 0 25px 20px;
         }
 
         a {
-       
-        display: block;
-        color: $black;
-        margin: 0 18px 20px 18px;
-        
-       }
+            display: block;
+            color: $black;
+            margin: 0 18px 20px 18px;
+        }
 
        .new {
-        position: relative;
-       }
+            position: relative;
+        }
 
        .new::before {
 
@@ -375,13 +364,10 @@ header {
     }
     
     h2 {
-        
         font-size: 28px;
         font-weight: 500;
         font-family: "Shrikhand", "cursive";
-        
-        
-   }
+    }
 
    i {
     font-size: 25px;
@@ -476,4 +462,55 @@ header {
         box-shadow: 0 4px 10px 0 rgba($color: $black, $alpha: 0.5);
     }
 }
+}
+
+
+//RESPONSIVE
+
+@media screen and (min-width: $breakpoint_desktop) {
+
+    
+
+//PRESENTATION
+    
+    .presentation {
+
+        h1 {
+            font-size: 40px;
+        }
+    }
+
+//FONCTIONNEMENT
+    
+    .fonctionnement_cards  {
+
+        width: 75%;
+        margin: auto;
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            
+        }
+        
+    }
+
+//RESTAURANTS 
+
+    .container {
+    
+        width: 75%;
+        margin: auto;
+        
+        .liste_resto {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+           
+            
+    }
+        
+}
+    
 }
