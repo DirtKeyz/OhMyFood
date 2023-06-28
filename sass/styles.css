@@ -97,7 +97,7 @@ form .fa-location-dot {
 }
 .fonctionnement_cards i {
   color: #7E7E7E;
-  margin-right: 25px;
+  margin-right: 15px;
 }
 .fonctionnement_cards p {
   font-size: 16px;
@@ -259,7 +259,7 @@ header i {
 }
 .fiche_restaurant .title {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   background-color: inherit;
   align-items: center;
   position: relative;
@@ -274,7 +274,7 @@ header i {
 }
 .fiche_restaurant i {
   font-size: 25px;
-  margin-right: 20px;
+  padding-left: 30px;
 }
 
 .menu_restaurant h3 {
@@ -326,7 +326,8 @@ header i {
 
 .command {
   text-align: center;
-  margin: 40px 0 40px 0;
+  margin-top: 40px;
+  padding-bottom: 40px;
 }
 .command .btn {
   display: inline-block;
@@ -347,7 +348,7 @@ header i {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   .presentation h1 {
     font-size: 40px;
   }
@@ -363,9 +364,39 @@ header i {
   .container {
     width: 75%;
     margin: auto;
+    padding-bottom: 0;
   }
   .container .liste_resto {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+    row-gap: 25px;
+  }
+  .photo_plat img {
+    height: 400px;
+  }
+  .fiche_restaurant {
+    width: 80%;
+    margin: auto;
+  }
+  .fiche_restaurant .menu_restaurant {
+    width: 60%;
+    margin: auto;
+  }
+  .footer {
+    position: relative;
+    height: 114px;
+  }
+  .footer h4 {
+    position: absolute;
+    right: 50px;
+    bottom: 16px;
+  }
+  .footer ul {
+    display: flex;
+    position: absolute;
+    right: 270px;
+    bottom: 30px;
   }
 }/*# sourceMappingURL=styles.css.map */
