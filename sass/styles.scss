@@ -31,7 +31,7 @@ $breakpoint_desktop: 1024px;
 
 header {
     display: flex;
-    position: relative;
+    // position: relative;
     justify-content: center;
     box-shadow: 0 2px 4px 0 rgba($color: $black, $alpha: 0.20);
     height: 63px;
@@ -203,13 +203,13 @@ form {
         h2 {
             font-size: 24px;
             font-weight: 700;
-            padding: 50px 0 25px 20px;
+            padding: 50px 0px 10px 20px;
         }
 
         a {
-            display: block;
             color: $black;
-            margin: 0 18px 20px 18px;
+            height: 100%;
+            width: 100%;
         }
 
        .new {
@@ -237,7 +237,8 @@ form {
        }
 
     .card_resto {
-            
+            position: relative;
+            margin: 18px;
             height: 274px;
             background-color: $white;
             border-radius: 15px;
@@ -249,44 +250,49 @@ form {
                 border-radius: 15px 15px 0 0;
                 
             }
- 
-        .contenu_card_resto {
-            position: relative;
+
+            
+            .contenu_card_resto {
+
             padding: 10px 25px 12px 13px;
-           
-        }
-
-        h3 {
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        p {
-            font-size: 17px;
-            font-weight: 300;
-        }
-
-        i {
-            font-size: 25px;
-            position: absolute;
-            top: 50%;
-            right: 30px;
-            transform: translateY(-50%);
-            transition: all 0.2s;
-            
-            
-            &:hover {
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-                background-image : linear-gradient($purple,$pink);
-                font-weight: 900;
+                
             }
             
+            h3 {
+                font-size: 18px;
+                font-weight: 700;
+            }
+            
+            p {
+                font-size: 17px;
+                font-weight: 300;
+            }
+            
+            i {
+                font-size: 25px;
+                position: absolute;
+                right: 30px;
+                bottom: 25px;
+    
+            }
+            
+            .fa-solid {
+                color: transparent;
+                background-image: linear-gradient($purple, $pink);
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+                transition: all 0.5s;
+            
+            &:hover {
+                opacity: 1;
+            }
+        
         }
         
-    }
+        
 }
+    }
     
 // FOOTER
 
@@ -353,41 +359,61 @@ header {
     display: block;
     width: 100%;
     height: 275px;
-   
+    position: relative;
+    z-index: -1;
 }
 }
 
 .fiche_restaurant {
 
     background-color: $background;
+    border-radius: 2em 2em 0 0;
+    margin-top: -40px;
         
     
     
     .title {
-        position: relative;
         display: flex;
-        justify-content: center;
-        background-color: inherit;
-        align-items: center;
-        margin-top: -40px;
+        justify-content: space-around;
         padding-top: 20px;
-        border-radius: 2em 2em 0 0;
+        flex-wrap: wrap;
+
+    }
+
+    .like {
+        position: relative;
         
-        i {
-            font-size: 25px;
-            padding-left: 30px;
-        }
+            i {
+                font-size: 25px;
+                position: absolute;
+                top: 8px;
+                left: -30px;
+                cursor: pointer;
+                
+    
+            }
+
+            .fa-solid {
+                color: transparent;
+                background-image: linear-gradient($purple, $pink);
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+                transition: all 0.5s;
+                
+                &:hover {
+                    opacity: 1;
+                }
+            }
     }
     
     h2 {
-        
+
         font-size: 28px;
         font-weight: 500;
         font-family: "Shrikhand", "cursive";
         
     }
-
-
 }
 
 .menu_restaurant {
@@ -578,7 +604,18 @@ header {
 
 .fiche_restaurant {
     width: 80%;
-    margin: auto;
+    margin: -40px auto 0px auto;
+
+    .title {
+        display: flex;
+        justify-content: center;
+
+        i {
+            position: absolute;
+            left: 30px;
+        }
+    }
+
 
     .menu_restaurant {
         width: 60%;
