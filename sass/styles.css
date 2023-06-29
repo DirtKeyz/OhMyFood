@@ -178,7 +178,7 @@ form .fa-location-dot {
 }
 .container .card_resto {
   position: relative;
-  margin: 18px;
+  margin-bottom: 30px;
   height: 274px;
   background-color: #FFF;
   border-radius: 15px;
@@ -252,6 +252,7 @@ header {
   position: relative;
 }
 header i {
+  color: #000;
   display: block;
   font-size: 30px;
   position: absolute;

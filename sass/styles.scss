@@ -31,7 +31,6 @@ $breakpoint_desktop: 1024px;
 
 header {
     display: flex;
-    // position: relative;
     justify-content: center;
     box-shadow: 0 2px 4px 0 rgba($color: $black, $alpha: 0.20);
     height: 63px;
@@ -238,7 +237,7 @@ form {
 
     .card_resto {
             position: relative;
-            margin: 18px;
+            margin-bottom: 30px;
             height: 274px;
             background-color: $white;
             border-radius: 15px;
@@ -344,6 +343,7 @@ header {
     position: relative;
 
     i {
+        color: $black;
         display: block;
         font-size: 30px;
         position: absolute;
