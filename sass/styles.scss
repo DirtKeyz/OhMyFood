@@ -123,7 +123,7 @@ form {
     
 }
 
-//FONCTIONNEMENT
+// FONCTIONNEMENT
 
 .fonctionnement_cards {
 
@@ -188,7 +188,7 @@ form {
 }
     
 
-    //RESTAURANTS
+// RESTAURANTS
 
     .bg_resto {
         background-color: $background;
@@ -251,10 +251,9 @@ form {
             }
  
         .contenu_card_resto {
-            display: flex;
-            justify-content: space-between;
+            position: relative;
             padding: 10px 25px 12px 13px;
-            align-items: center;
+           
         }
 
         h3 {
@@ -269,14 +268,28 @@ form {
 
         i {
             font-size: 25px;
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            transition: all 0.2s;
 
-         }
+            
+            &:hover {
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                background-image : linear-gradient($purple,$pink);
+                font-weight: 900;
+            }
+            
+        }
    
    
     }
 }
     
-//FOOTER
+// FOOTER
 
 .footer {
      background-color: $grey;
@@ -348,31 +361,33 @@ header {
 .fiche_restaurant {
 
     background-color: $background;
-
-   
-    .title {
         
+    
+    
+    .title {
+        position: relative;
         display: flex;
         justify-content: center;
         background-color: inherit;
         align-items: center;
-        position: relative;
         margin-top: -40px;
         padding-top: 20px;
         border-radius: 2em 2em 0 0;
-      
+        
+        i {
+            font-size: 25px;
+            padding-left: 30px;
+        }
     }
     
     h2 {
+        
         font-size: 28px;
         font-weight: 500;
         font-family: "Shrikhand", "cursive";
+        
     }
 
-   i {
-    font-size: 25px;
-    padding-left: 30px;
-   }
 
 }
 
@@ -409,39 +424,77 @@ header {
         align-items: center;
         background-color: $background;
         border-radius: 20px;
-        padding: 20px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        cursor: pointer;
+
         
-        .entree {
+        .entree, .plat, .dessert {
             
             line-height: 23px;
+            padding: 20px;
+            white-space: nowrap;
+            overflow: hidden;
         }
         
         
         h4 {
             font-size: 18px;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
-
+        
         p {
             font-size: 15px;
             font-weight: 300;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
         
         .price {
+            margin-left: auto;
             display: flex;
             align-self: flex-end;
             font-weight: bold;
-
+            padding: 0 20px 20px 0;
+            
+        }
+        
+        .check {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 60px;
+            background-color: $green;
+            margin-right: -60px;
+            transition: all 0.5s;
+        }
+        
+        &:hover .check {
+            margin-right: 0px;
         }
 
-       }
-     
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            background: $white;
+            color: $green;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+        }
+        
+    }
+    
 }
 
 .command {
-     text-align: center;
-     margin-top: 40px;
-     padding-bottom: 40px;
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 40px;
 
         .btn {
        
@@ -466,13 +519,13 @@ header {
 }
 
 
-//RESPONSIVE
+// RESPONSIVE
 
 @media screen and (min-width: $breakpoint_desktop) {
 
     
 
-//PRESENTATION
+// PRESENTATION
     
     .presentation {
 
@@ -481,7 +534,7 @@ header {
         }
     }
 
-//FONCTIONNEMENT
+// FONCTIONNEMENT
     
     .fonctionnement_cards  {
 
@@ -497,7 +550,7 @@ header {
         
     }
 
-//RESTAURANTS 
+// RESTAURANTS 
 
     .container {
     
@@ -518,10 +571,10 @@ header {
 }
     
 
-//MENU-RESTAURANT
+// MENU-RESTAURANT
 
 .photo_plat img {
-    height: 400px;
+    height: 350px;
 }
 
 .fiche_restaurant {
@@ -535,7 +588,7 @@ header {
 }
 
 
-//FOOTER
+// FOOTER
 
 .footer {
     

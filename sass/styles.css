@@ -189,10 +189,8 @@ form .fa-location-dot {
   border-radius: 15px 15px 0 0;
 }
 .container .card_resto .contenu_card_resto {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
   padding: 10px 25px 12px 13px;
-  align-items: center;
 }
 .container .card_resto h3 {
   font-size: 18px;
@@ -204,6 +202,18 @@ form .fa-location-dot {
 }
 .container .card_resto i {
   font-size: 25px;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  transition: all 0.2s;
+}
+.container .card_resto i:hover {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  font-weight: 900;
 }
 
 .footer {
@@ -258,23 +268,23 @@ header i {
   background-color: #F7F7F7;
 }
 .fiche_restaurant .title {
+  position: relative;
   display: flex;
   justify-content: center;
   background-color: inherit;
   align-items: center;
-  position: relative;
   margin-top: -40px;
   padding-top: 20px;
   border-radius: 2em 2em 0 0;
+}
+.fiche_restaurant .title i {
+  font-size: 25px;
+  padding-left: 30px;
 }
 .fiche_restaurant h2 {
   font-size: 28px;
   font-weight: 500;
   font-family: "Shrikhand", "cursive";
-}
-.fiche_restaurant i {
-  font-size: 25px;
-  padding-left: 30px;
 }
 
 .menu_restaurant h3 {
@@ -305,23 +315,57 @@ header i {
   align-items: center;
   background-color: #F7F7F7;
   border-radius: 20px;
-  padding: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  cursor: pointer;
 }
-.menu_restaurant .item .entree {
+.menu_restaurant .item .entree, .menu_restaurant .item .plat, .menu_restaurant .item .dessert {
   line-height: 23px;
+  padding: 20px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .menu_restaurant .item h4 {
   font-size: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu_restaurant .item p {
   font-size: 15px;
   font-weight: 300;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu_restaurant .item .price {
+  margin-left: auto;
   display: flex;
   align-self: flex-end;
   font-weight: bold;
+  padding: 0 20px 20px 0;
+}
+.menu_restaurant .item .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 60px;
+  background-color: #99E2D0;
+  margin-right: -60px;
+  transition: all 0.5s;
+}
+.menu_restaurant .item:hover .check {
+  margin-right: 0px;
+}
+.menu_restaurant .item i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  background: #FFF;
+  color: #99E2D0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
 }
 
 .command {
@@ -374,7 +418,7 @@ header i {
     row-gap: 25px;
   }
   .photo_plat img {
-    height: 400px;
+    height: 350px;
   }
   .fiche_restaurant {
     width: 80%;
