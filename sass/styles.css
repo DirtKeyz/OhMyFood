@@ -212,12 +212,12 @@ form .fa-location-dot {
 }
 
 .container {
-  padding-bottom: 65px;
+  padding-bottom: 45px;
 }
 .container h2 {
   font-size: 24px;
   font-weight: 700;
-  padding: 50px 0px 10px 20px;
+  padding: 50px 0px 25px 20px;
 }
 .container a {
   color: #000;
@@ -246,7 +246,7 @@ form .fa-location-dot {
 }
 .container .card_resto {
   position: relative;
-  margin: 10px 20px 30px 20px;
+  margin: 0px 20px 18px 20px;
   height: 274px;
   background-color: #FFF;
   border-radius: 15px;
@@ -505,12 +505,22 @@ header i {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
+@media screen and (min-width: 768px) {
+  .fonctionnement_cards {
+    width: 85%;
+    margin: auto;
+  }
+  .container {
+    width: 85%;
+    margin: auto;
+  }
+}
 @media screen and (min-width: 1024px) {
   .presentation h1 {
     font-size: 40px;
   }
   .fonctionnement_cards {
-    width: 75%;
+    width: 85%;
     margin: auto;
   }
   .fonctionnement_cards .cards {
@@ -519,9 +529,9 @@ header i {
     justify-items: center;
   }
   .container {
-    width: 75%;
+    width: 85%;
     margin: auto;
-    padding-bottom: 0;
+    padding-bottom: 30px;
   }
   .container .liste_resto {
     display: grid;
@@ -529,6 +539,9 @@ header i {
     -moz-column-gap: 50px;
          column-gap: 50px;
     row-gap: 25px;
+  }
+  .container .card_resto {
+    margin: 0;
   }
   .photo_plat img {
     height: 350px;

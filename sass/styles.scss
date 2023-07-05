@@ -12,6 +12,7 @@ $grey_light: #EAEAEA;
 $grey_dark: #7E7E7E;
 $black: #000;
 $white: #FFF;
+$breakpoint_tablet: 768px;
 $breakpoint_desktop: 1024px;
 
 // GENERAL
@@ -268,12 +269,12 @@ form {
     
     .container {
         
-        padding-bottom: 65px;
+        padding-bottom: 45px;
      
         h2 {
             font-size: 24px;
             font-weight: 700;
-            padding: 50px 0px 10px 20px;
+            padding: 50px 0px 25px 20px;
         }
 
         a {
@@ -308,7 +309,7 @@ form {
 
     .card_resto {
             position: relative;
-            margin: 10px 20px 30px 20px;
+            margin: 0px 20px 18px 20px;
             height: 274px;
             background-color: $white;
             border-radius: 15px;
@@ -632,7 +633,26 @@ header {
 }
 
 
-// RESPONSIVE
+// RESPONSIVE TABLET
+
+@media screen and (min-width: $breakpoint_tablet) {
+
+    .fonctionnement_cards  {
+
+        width: 85%;
+        margin: auto;
+    }
+
+    .container {
+    
+        width: 85%;
+        margin: auto;
+    }
+
+}
+
+
+// RESPONSIVE DESKTOP
 
 @media screen and (min-width: $breakpoint_desktop) {
 
@@ -651,7 +671,7 @@ header {
     
     .fonctionnement_cards  {
 
-        width: 75%;
+        width: 85%;
         margin: auto;
         
         .cards {
@@ -667,19 +687,21 @@ header {
 
     .container {
     
-        width: 75%;
+        width: 85%;
         margin: auto;
-        padding-bottom: 0;
+        padding-bottom: 30px;
         
         .liste_resto {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             column-gap: 50px;
             row-gap: 25px;
+        }
 
-           
-            
-    }
+        .card_resto {
+            margin: 0;
+        }
+       
         
 }
     
