@@ -12,68 +12,6 @@ body {
   font-family: "Roboto", "sans-serif";
 }
 
-.loading-container {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background-color: #F7F7F7;
-  opacity: 0.95;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeout 0s 2.5s forwards;
-}
-.loading-container .loading {
-  display: block;
-  position: relative;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 9px solid transparent;
-  border-top-color: #9356DC;
-  filter: drop-shadow(20px -5px 5px rgba(0, 0, 0, 0.15));
-  animation: spin 1.5s linear infinite;
-}
-.loading-container .loading::before, .loading-container .loading::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  border: 7px solid transparent;
-}
-.loading-container .loading::before {
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  border-top-color: #FF79DA;
-  animation: spin 2s linear infinite;
-}
-.loading-container .loading::after {
-  top: 25px;
-  left: 25px;
-  right: 25px;
-  bottom: 25px;
-  border-top-color: #99E2D0;
-  animation: spin 1s linear infinite;
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes fadeout {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-
 header {
   display: flex;
   justify-content: center;
@@ -133,9 +71,11 @@ form .fa-location-dot {
   margin-bottom: 27px;
 }
 .presentation .btn {
-  display: inline-block;
+  display: grid;
+  place-items: center;
   height: 50px;
   width: 218px;
+  margin: 0 auto;
   color: #FFF;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 25px;
@@ -163,7 +103,7 @@ form .fa-location-dot {
   color: #7E7E7E;
   margin-right: 15px;
 }
-.fonctionnement_cards p {
+.fonctionnement_cards h3 {
   font-size: 16px;
   font-weight: 500;
 }
@@ -487,9 +427,11 @@ header i {
   padding-bottom: 40px;
 }
 .command .btn {
-  display: inline-block;
+  display: grid;
+  place-items: center;
   height: 50px;
   width: 218px;
+  margin: 0 auto;
   color: #FFF;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 25px;
