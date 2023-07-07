@@ -1,0 +1,91 @@
+//LOADING
+
+.loading-container {
+
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: $background;
+    opacity: 0.95;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeout 0s 2.5s forwards;
+    
+    .loading {
+        display: block;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 9px solid transparent;
+        border-top-color: $primary;
+        filter: drop-shadow(20px -5px 5px rgba(#000,0.15));
+        animation: spin 1.5s linear infinite;
+    }
+    
+    .loading::before, .loading::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        border: 7px solid transparent;
+    }
+    
+    .loading::before {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        border-top-color: $secondary;
+        animation: spin 2s linear infinite;
+    }
+
+    .loading::after {
+        top: 25px;
+        left: 25px;
+        right: 25px;
+        bottom: 25px;
+        border-top-color: $tertiary;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {transform: rotate(0deg)}
+        100% {transform: rotate(360deg)}
+    }
+
+    @keyframes fadeout {
+        0% {transform: scale(1)}
+        100% {transform: scale(0)}
+    }
+}
+
+// MENU APPEAR
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    width: 95%;
+    margin: 0 auto;
+    background-color: $background;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    cursor: pointer;
+    animation: discovery 1s;
+    animation-fill-mode: backwards;
+
+    @keyframes discovery {
+        0% {transform: scale(0);}
+        100% {transform: scale(1);}
+    }
+    
+    @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+            animation-delay: 150ms * $i;
+        }
+    }
+}

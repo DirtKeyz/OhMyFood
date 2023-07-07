@@ -1,0 +1,194 @@
+// MENU-RESTAURANT
+
+header {
+    position: relative;
+
+    i {
+        color: $black;
+        display: block;
+        font-size: 30px;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.photo_plat {
+
+ img {
+    display: block;
+    width: 100%;
+    height: 275px;
+    position: relative;
+    z-index: -1;
+}
+}
+
+.fiche_restaurant {
+
+    background-color: $background;
+    border-radius: 2em 2em 0 0;
+    margin-top: -40px;
+        
+    
+    
+    .title {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding-top: 20px;
+
+    }
+
+    .like {
+        position: relative;
+        
+            i {
+                font-size: 25px;
+                position: absolute;
+                top: 8px;
+                left: -30px;
+                cursor: pointer;
+    
+            }
+
+            .fa-solid {
+                @extend %heart;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+    }
+    
+    h2 {
+
+        font-size: 28px;
+        font-weight: 500;
+        font-family: "Shrikhand", "cursive";
+        
+    }
+}
+
+.menu_restaurant {
+
+    h3 {
+        font-weight: 300;
+        font-size: 16px;
+        margin: 20px 0px 20px 15px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 22px;
+            left: 0px;
+            width: 35px;
+            border: 2px solid $tertiary;
+        }
+    }
+
+    .entrees, .plats, .desserts {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+        
+
+    .entree, .plat, .dessert {       
+        line-height: 23px;
+        padding: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        }
+        
+        
+        h4 {
+            font-size: 18px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        
+        p {
+            font-size: 15px;
+            font-weight: 300;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        
+        .price {
+            margin-left: auto;
+            display: flex;
+            align-self: flex-end;
+            font-weight: bold;
+            padding: 0px 20px 20px 0px;
+            
+        }
+        
+        .check {
+            @extend %check;       
+            
+        }
+
+        .item:hover .check {
+            margin-right: 0px;
+        }
+
+        i {
+            @extend %flex_center;
+            font-size: 16px;
+            background: $white;
+            color: $tertiary;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+        }
+        
+    }
+    
+
+
+.command {
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 40px;
+
+        .btn {
+            @extend %button;
+
+            &:hover{
+                opacity: 0.8;
+                box-shadow: 0px 4px 10px 0px rgba($color: $black, $alpha: 0.5);
+            }
+        }
+}
+
+//************************* RESPONSIVE DESKTOP *************************//
+
+    // MENU-RESTAURANT
+    
+    .photo_plat img {
+        height: 350px;
+    }
+    
+    .fiche_restaurant {
+        width: 80%;
+        margin: -40px auto 0px auto;
+    
+        .title {
+            display: flex;
+            justify-content: center;
+    
+            i {
+                position: absolute;
+                left: 30px;
+            }
+        }
+    
+    
+        .menu_restaurant {
+            width: 60%;
+            margin: auto;
+        }
+    }

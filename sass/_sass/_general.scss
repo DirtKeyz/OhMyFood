@@ -1,0 +1,359 @@
+body {
+    font-family: "Roboto", "sans-serif";
+}
+
+// HEADER
+
+header {
+
+    @extend %flex_center;
+    box-shadow: 0px 2px 4px 0px rgba($color: $black, $alpha: 0.20);
+    height: 63px;
+    
+    .logo img {
+        width: 162px;
+        margin-top: 14px;
+        margin-bottom: 5px;
+    }
+}
+
+// FORM
+
+form {
+    @extend %flex_center;
+    height: 50px;
+    color: $grey;
+    background-color: $grey_light;
+
+    
+    .search_bar {
+        
+        border: none;
+        background-color: inherit;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        margin-left: 20px;
+        
+        
+        &::placeholder {
+            color: $grey;
+        }
+        
+    }
+
+    .fa-location-dot {
+        position: relative;
+        font-size: 16px;
+        left: 35px;
+    }
+}
+
+// PRESENTATION
+
+.presentation {
+
+    background-color: $background;
+    padding: 40px 0px 57px 0px;
+    text-align: center;
+      
+    h1 {
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 27px;
+    }
+
+    .btn {  
+        @extend %button;
+
+        &:hover{
+            opacity: 0.8;
+            box-shadow: 0px 4px 10px 0px rgba($color: $black, $alpha: 0.5);
+        }
+    }
+    
+}
+
+// FONCTIONNEMENT
+
+.fonctionnement_cards {
+
+    background-color: $white;
+       
+    h2 {
+        font-size: 24px;
+        font-weight: 700;
+        padding: 50px 0px 25px 20px;
+    }
+
+    i {
+        color: $grey_dark;
+        margin-right: 15px;
+    }
+    
+    h3 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 0 20px;
+    }
+    
+    .card {
+        @extend %flex_center;
+        position: relative;
+        background-color: $background;
+        height: 72px;
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        margin: 0px 20px;
+
+        &:hover i{
+            color: $primary;
+        }
+
+        &:hover {
+            background-color: $grey_light;
+        }
+        
+    }
+
+    .pastille {
+            @extend %flex_center;
+            width: 24px;
+            height: 24px;
+            background-color: $primary;
+            color: $white;
+            border-radius: 50%;
+            position: absolute;
+            left: -12px;
+        }
+        
+}
+
+// RESTAURANTS
+
+.bg_resto {
+    background-color: $background;
+    margin-top: 45px;
+    
+}
+
+.container {
+    
+    padding-bottom: 45px;
+ 
+    h2 {
+        font-size: 24px;
+        font-weight: 700;
+        padding: 50px 0px 25px 20px;
+    }
+
+    a {
+        color: $black;
+        height: 100%;
+        width: 100%;
+    }
+
+   .new {
+        position: relative;
+    }
+
+   .new::before {
+        @extend %new;  
+   }
+
+.card_resto {
+        position: relative;
+        margin: 0px 20px 18px 20px;
+        height: 274px;
+        background-color: $white;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.10);
+
+        &:hover {
+            transform: scale(1.01);
+        }
+        
+        img {
+            height: 75%;
+            width: 100%;
+            border-radius: 15px 15px 0px 0px;
+            
+        }
+
+        .contenu_card_resto {
+
+        padding: 10px 25px 12px 13px;
+            
+        }
+        
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        
+        p {
+            font-size: 17px;
+            font-weight: 300;
+        }
+        
+        i {
+            font-size: 25px;
+            position: absolute;
+            right: 30px;
+            bottom: 25px;
+
+        }
+        
+        .fa-solid {
+            @extend %heart;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    
+    
+}
+}
+
+// FOOTER
+
+.footer {
+        background-color: $grey;
+        height: 186px;
+
+    h4 {
+       font-size: 20px;
+       font-family: Shrikhand, cursive;
+       font-weight: 100;
+       color: $white;
+       padding: 22px 0px 16px 25px;
+    }
+
+    li {
+       margin-bottom: 7px;
+       padding-left: 25px;
+
+    }
+
+    .w400 {
+       font-weight: 400;
+   }
+
+   
+    a {
+       color: $white;
+       font-weight: 500;
+     
+    }
+
+    i {
+       margin-right: 10px;
+       font-size: 16px;
+    }
+
+    .fa-utensils {
+       margin-right: 15px;
+   }
+}
+
+//************************* RESPONSIVE TABLET *************************//
+
+@media screen and (min-width: $breakpoint_tablet) {
+
+    // FONCTIONNEMENT + // RESTAURANTS
+    
+        .fonctionnement_cards, .container  {
+    
+            width: 85%;
+            margin: auto;
+        }
+    }
+    
+//************************* RESPONSIVE DESKTOP *************************//
+    
+    @media screen and (min-width: $breakpoint_desktop) {
+
+    // PRESENTATION
+        
+        .presentation {
+    
+            h1 {
+                font-size: 40px;
+            }
+        }
+    
+    // FONCTIONNEMENT
+        
+        .fonctionnement_cards  {
+    
+            width: 70%;
+            margin: auto;
+            
+            .cards {
+                display: grid;
+                justify-items: center;
+                grid-template-columns: repeat(3, 1fr);
+                
+            }
+            
+        }
+    
+    // RESTAURANTS 
+    
+        .container {
+        
+            width: 70%;
+            margin: auto;
+            padding-bottom: 30px;
+            
+            .liste_resto {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 50px;
+                row-gap: 25px;
+            }
+    
+            .card_resto {
+                margin: 0px;
+            }         
+    }
+          
+    // FOOTER
+     
+    .footer {
+        
+        position: relative;
+        height: 114px;
+        
+        h4 {
+            position: absolute;
+            right: 50px;
+            bottom: 16px;
+        }
+        
+        ul {
+            display: flex;
+            position: absolute;
+            right: 270px;
+            bottom: 30px;
+        }
+    }
+ 
+    }
