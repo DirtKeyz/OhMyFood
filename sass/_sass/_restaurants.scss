@@ -164,7 +164,34 @@ header {
         }
 }
 
+//************************* RESPONSIVE TABLET *************************//
+
+@media screen and (min-width: $breakpoint_tablet) {
+
+    // MENU-RESTAURANT
+    
+        .menu_restaurant {
+    
+            width: 85%;
+            margin: auto;
+        }
+
+       
+        .fiche_restaurant .title {
+            display: flex;
+            justify-content: center;
+
+            i {
+                position: absolute;
+                left: 30px;
+            }
+    }
+}
+
+
 //************************* RESPONSIVE DESKTOP *************************//
+
+@media screen and (min-width: $breakpoint_desktop) {
 
     // MENU-RESTAURANT
     
@@ -173,7 +200,7 @@ header {
     }
     
     .fiche_restaurant {
-        width: 80%;
+        width: 75%;
         margin: -40px auto 0px auto;
     
         .title {
@@ -188,7 +215,8 @@ header {
     
     
         .menu_restaurant {
-            width: 60%;
+            width: 75%;
             margin: auto;
         }
     }
+}
